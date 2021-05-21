@@ -1,4 +1,6 @@
 .header {
+    box-sizing: border-box;
+    height: 70px;
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -9,33 +11,96 @@
     &__logo {
 
     }
-    nav {
-        width: 100% !important;
-    }
+    &__menu-container {
+        width: 100% ;
 
-    &__menu {
-        display: flex;
-        align-items: center;
-        
-        &-item {
-            a {
-                padding: .6rem 1rem;
-                color: $light-text-color;
-                transition: .2s;
+        .menu-mobile {
+            display: none;
+        }
 
-                &:hover {
-                    color: black
+        .header__menu {
+            display: flex;
+            align-items: center;
+            
+            &-item {
+                a {
+                    padding: .6rem 1rem;
+                    color: $light-text-color;
+                    transition: .2s;
+    
+                    &:hover {
+                        color: black
+                    }
+                }
+    
+                button {
+                    @include btn-start;
+                    float: right;
+                }
+                
+                &:last-child {
+                    flex-grow: 1;
                 }
             }
+        }
+    }
 
-            button {
-                @include btn-start;
-                float: right;
+}
+
+@media (max-width: 780px) {
+    .header {
+        justify-content: space-between;
+
+        &__menu-container {
+            width: auto;
+    
+            .menu-mobile {
+                display: block !important;
+                // @include btn-start;
+                padding: .6rem 1rem;
             }
-            
-            &:last-child {
-                flex-grow: 1;
+
+            .header__menu {
+                display: none;
             }
         }
+        
+        &__menu-container.active {
+            background-color: #000;
+
+            .header__menu {
+                display: block;
+                animation: animaHeigth .2s linear;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                overflow-y: hidden;
+                
+                &-item {
+                    margin: 0 5% ;
+                    a {
+                        padding: .6rem 0;
+                        display: block;
+                        border-bottom: 2px solid $dark-blue;
+                    }
+                    button {
+                        float: left;
+                        margin: .5rem 0;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@keyframes animaHeigth {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
     }
 }

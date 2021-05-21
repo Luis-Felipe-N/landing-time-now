@@ -18,13 +18,13 @@
 </head>
 <body>
     
-    <div class="wrapper-header-hero">
         <!-- HEADER -->
         <header class="header">
             <div class="header__logo">
                 <img src="/Assets/Logo.svg" alt="Logo">
             </div>
-            <nav>
+            <nav data-js="menu" class="header__menu-container">
+                <button class="menu-mobile">Menu</button>
                 <ul class="header__menu">
                     <li class="header__menu-item"><a href="#features">Features</a></li>
                     <li class="header__menu-item"><a href="#pricing">Pricing</a></li>
@@ -60,7 +60,7 @@
 
     <!-- HERO END -->
 
-    </div>
+    <script src="/js/menu.js"></script>
 
 </body>
 </html>

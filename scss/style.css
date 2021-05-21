@@ -9,6 +9,9 @@
 }
 
 .header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,11 +23,15 @@
   padding: 1rem 7%;
 }
 
-.header nav {
-  width: 100% !important;
+.header__menu-container {
+  width: 100%;
 }
 
-.header__menu {
+.header__menu-container .menu-mobile {
+  display: none;
+}
+
+.header__menu-container .header__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,18 +40,18 @@
           align-items: center;
 }
 
-.header__menu-item a {
+.header__menu-container .header__menu-item a {
   padding: .6rem 1rem;
   color: rgba(0, 0, 0, 0.6);
   -webkit-transition: .2s;
   transition: .2s;
 }
 
-.header__menu-item a:hover {
+.header__menu-container .header__menu-item a:hover {
   color: black;
 }
 
-.header__menu-item button {
+.header__menu-container .header__menu-item button {
   padding: 1rem 1.4rem;
   background-color: #232169;
   color: white;
@@ -57,14 +64,76 @@
   float: right;
 }
 
-.header__menu-item button:hover {
+.header__menu-container .header__menu-item button:hover {
   background-color: #1d1b57;
 }
 
-.header__menu-item:last-child {
+.header__menu-container .header__menu-item:last-child {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+}
+
+@media (max-width: 780px) {
+  .header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header__menu-container {
+    width: auto;
+  }
+  .header__menu-container .menu-mobile {
+    display: block !important;
+    padding: .6rem 1rem;
+  }
+  .header__menu-container .header__menu {
+    display: none;
+  }
+  .header__menu-container.active {
+    background-color: #000;
+  }
+  .header__menu-container.active .header__menu {
+    display: block;
+    -webkit-animation: animaHeigth .2s linear;
+            animation: animaHeigth .2s linear;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    overflow-y: hidden;
+  }
+  .header__menu-container.active .header__menu-item {
+    margin: 0 5%;
+  }
+  .header__menu-container.active .header__menu-item a {
+    padding: .6rem 0;
+    display: block;
+    border-bottom: 2px solid #232169;
+  }
+  .header__menu-container.active .header__menu-item button {
+    float: left;
+    margin: .5rem 0;
+  }
+}
+
+@-webkit-keyframes animaHeigth {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes animaHeigth {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }
 
 .hero {
