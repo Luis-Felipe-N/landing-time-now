@@ -101,8 +101,8 @@ p {
     padding: 1rem 1.4rem;
     background-color: #fff;
     border: none;
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
   .header__menu-container .menu-mobile .hamburg {
     width: 25px;
