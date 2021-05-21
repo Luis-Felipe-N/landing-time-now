@@ -1,0 +1,29 @@
+// BTN START
+@mixin btn-start {
+    padding: 1rem 1.4rem;
+    background-color: $dark-blue;
+    color: white;
+    border: none;
+    border-radius: .2rem;
+    cursor: pointer;
+    transition: .2s;
+    font: {
+        weight: 700
+    }
+
+    &:hover {
+        background-color: $very-dark-blue;
+    }
+}
+
+// 
+
+@mixin padding {
+    padding: 1rem 7%;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
