@@ -1,8 +1,7 @@
 .clients {
     @include padding;
     @include center;
-    margin: 5rem 0;
-    gap: 3rem;
+    gap: 2rem;
 
     &__img {
         min-width: 50%;

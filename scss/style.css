@@ -231,11 +231,11 @@ p {
 .hero__img::before {
   content: '';
   width: 100%;
-  height: 140%;
+  height: 200%;
   background-color: #47CCDF;
   position: absolute;
   right: 0;
-  top: -10rem;
+  bottom: -1rem;
   z-index: -1;
 }
 
@@ -320,8 +320,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 5rem 0;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .clients__img {
