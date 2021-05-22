@@ -589,7 +589,7 @@ p {
     -ms-grid-rows: 1rem 1fr 100px;
         grid-template-rows: 1rem 1fr 100px;
   }
-  .footer-menu {
+  .footer nav {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1 / 3;
