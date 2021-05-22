@@ -1,9 +1,10 @@
 .clients {
-    @include padding;
+    // @include padding;
     @include center;
+    padding: 2rem 5%;
     gap: 2rem;
 
-    &__img {
+    &-img {
         min-width: 50%;
         h1 {
             color: $dark-blue;
@@ -11,12 +12,12 @@
             margin-bottom: 1rem;
         }
 
-        &-list {
+        &__list {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
 
-            &-item {
+            &__item {
                 width: 50px;
 
                 img {
@@ -26,7 +27,7 @@
         }
     }
 
-    &__text {
+    &-text {
         p {
             margin-bottom: 1rem;
         }

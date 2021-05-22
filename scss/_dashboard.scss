@@ -1,0 +1,52 @@
+.dashboard {
+    padding: 3rem 5%;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: $dashboard-bg;
+
+    &-subtitle {
+        color: $dashboard-subtitle;
+        font-weight: 700;
+    }
+
+    &-title {
+        color: $dashboard-title;
+        font-size: 2rem;
+    }
+
+    &-btn {
+        @include btn-start;
+    }
+
+    &-link-view-demo {
+        @include view-demo;
+        padding: 1rem 0;
+        display: flex;
+        align-items: center;
+        
+        &:hover i {
+            transform: translateX(5px);
+        }
+
+        i {
+            transition: .2s;
+            margin-left: .5rem;
+
+        }
+    }
+
+    .dashboard-rigth, .dashboard-left {
+        display: flex;
+        flex-direction: column;
+        gap: .7rem;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 650px ) {
+    .dashboard {
+        flex-direction: column;
+        gap: 3rem;
+    }
+}

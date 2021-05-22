@@ -19,13 +19,19 @@
 // 
 
 @mixin padding {
-    padding: 1rem 7%;
+    padding: 1rem 5%;
 }
 
 @mixin center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin view-demo {
+    padding: 1rem 1.4rem;
+                font-weight: 700;
+                color: $dark-text-color;
 }
 
 

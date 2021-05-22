@@ -8,21 +8,21 @@
     padding: 1rem 7% ;
 
     
-    &__logo {
+    &-logo {
 
     }
-    &__menu-container {
+    &-menu__container {
         width: 100% ;
 
         .menu-mobile {
             display: none;
         }
 
-        .header__menu {
+        .header-menu {
             display: flex;
             align-items: center;
             
-            &-item {
+            &__item {
                 a {
                     padding: .6rem 1rem;
                     color: $light-text-color;
@@ -50,7 +50,7 @@
     .header {
         justify-content: space-between;
 
-        &__menu-container {
+        &-menu__container {
             width: auto;
     
             .menu-mobile {
@@ -62,15 +62,17 @@
                     weight: 400;
                     size: 1rem;
                 }
-                padding: 1rem 1.4rem;
+                padding: 1rem 0 1rem 1.4rem;
                 background-color: #fff;
                 border: none;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
                 .hamburg {
                     width: 25px;
-                    height: .6rem;
+                    height: 2px;
+                    background-color: $dark-blue;
                     position: relative;
+                    transition: .4s;
                     
                     &::after, &::before {
                         content: '';
@@ -79,19 +81,19 @@
                         height: 3px;
                         background-color: $dark-blue;
                         left: 0;
-                        transition: .2s;
+                        transition: .4s;
                     }
                     &::after {
-                        top: 0;
+                        top: -5px;
                     }&::before {
-                        bottom: 0;
+                        bottom: -5px;
                     }
                 }
                 
             }
 
             // ul
-            .header__menu {
+            .header-menu {
                 display: none;
                 position: absolute;
                 overflow-y: hidden;
@@ -101,7 +103,7 @@
                 background-color: #fff;
                 box-shadow: 0 10px 10px rgba(0, 0, 0, 0.281);
 
-                &-item {
+                &__item {
                     margin: 0 5% ;
                     a {
                         padding: .6rem 0;
@@ -116,18 +118,21 @@
             }
         }
         
-        &__menu-container.active {
+        &-menu__container.active {
 
-            .header__menu {
+            .header-menu {
                 display: block;
-                animation: animaHeigth .2s ;
+                animation: animaMenuEnter .2s ;
             }
 
             .menu-mobile {
                 .hamburg {
+                    background-color: transparent;
                     &::after {
                         transform: rotate(45deg);
+                        top: 0%;
                     }&::before {
+                        // top0
                         bottom: auto;
                         transform: rotate(135deg);
                     }
@@ -138,11 +143,14 @@
     }
 }
 
-@keyframes animaHeigth {
+@keyframes animaMenuEnter {
     from {
-        top: 50px
+        top: 50px;
+        opacity: 0;
     }
     to {
         top:70px;
+        opacity: 1;
     }
 }
+
