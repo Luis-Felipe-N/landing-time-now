@@ -84,7 +84,7 @@
 
 @media (max-width: 750px){
     .footer  {
-        grid-template-rows: 1rem 1fr 1fr;
+        grid-template-rows: 1rem 1fr 100px;
 
         &-menu {
             grid-column: span 2;
