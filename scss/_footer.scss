@@ -1,0 +1,99 @@
+.footer {
+   padding: 3rem 5%;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1rem 1fr;
+   gap: 3rem;
+   
+
+   &-logo {
+       margin: 1rem 0;
+       grid-column: span 2;
+       grid-row: 1 / 2;
+   }
+
+    &-menu {
+        grid-column: span 1;
+        grid-row: 2 / 3;
+        flex-wrap: wrap;
+        display: flex;
+        gap: 5rem;
+
+        font: {
+            size: 1.1rem;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            &-ul {
+                display: flex;
+                flex-direction: column;
+                gap: .5rem;
+                &-tittle {
+                    font: {
+                        size: 1.15rem;
+                        weight: 700;
+                    }
+
+                    color: #000;
+                }
+
+                a {
+                    color: $light-text-color;
+                    transition: .2s;
+
+                    &:hover {
+                        color: rgba(0, 0, 0, 0.9);
+                    }
+                }
+
+            }
+        }
+    }
+
+    &-input {
+        grid-column: 2 /3;
+        grid-row: 2 / 3;
+        justify-self: center;
+
+        
+        &__container {
+            display: flex;
+            align-items: center;
+            border: 1px solid gray;
+            padding: 5px;
+            border-radius: .2rem;
+            margin-top: .5rem;
+
+            input {
+                max-width: 10rem;
+                padding: auto .5rem;
+                border: none;
+                outline: transparent solid 1px;
+                font-size: .9rem
+            }
+            button {
+                @include btn-start;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px){
+    .footer  {
+        grid-template-rows: 1rem 1fr 1fr;
+
+        &-menu {
+            grid-column: span 2;
+        }
+
+        &-input {
+            grid-column: span 2;
+            grid-row: 3 / 4;
+            justify-self: start;
+        }
+    }
+}

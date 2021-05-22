@@ -1,5 +1,6 @@
 // BTN START
 @mixin btn-start {
+    text-overflow: ellipsis;
     padding: 1rem 1.4rem;
     background-color: $dark-blue;
     color: white;
