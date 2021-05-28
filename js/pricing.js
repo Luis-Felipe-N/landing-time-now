@@ -20,7 +20,7 @@ const changeInput = ( el ) => {
 document.addEventListener( 'click', e => {
     const el = e.target
 
-    if ( el.matches('[data-js="btn-pricing"]') ) return replacePage
+    if ( el.matches('[data-js="btn-pricing"]') ) return replacePage()
     if ( el.matches( '[data-js="input-billed"]' ) ) {
         return changeInput( el )
     }
