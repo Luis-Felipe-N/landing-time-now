@@ -1,5 +1,7 @@
-// BTN START
-@mixin btn-start {
+
+// MIXINS ==========
+
+@mixin btn {
     text-overflow: ellipsis;
     padding: 1rem 1.4rem;
     background-color: $dark-blue;
@@ -17,8 +19,6 @@
     }
 }
 
-// 
-
 @mixin padding {
     padding: 1rem 5%;
 }
@@ -35,6 +35,12 @@
                 color: $dark-text-color;
 }
 
+@mixin flex-al-c {
+    display: flex;
+    align-items: center;
+}
+
+// STYLE GLOBAL ============
 
 p {
     color: $light-text-color;

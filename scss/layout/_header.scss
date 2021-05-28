@@ -1,8 +1,7 @@
 .header {
     box-sizing: border-box;
     height: 70px;
-    display: flex;
-    align-items: center;
+    @include flex-al-c;
     gap: 1rem;
     position: relative;
     padding: 1rem 7% ;
@@ -19,8 +18,7 @@
         }
 
         .header-menu {
-            display: flex;
-            align-items: center;
+            @include flex-al-c;
             
             &__item {
                 a {
@@ -33,7 +31,7 @@
                 }
     
                 button {
-                    @include btn-start;
+                    @include btn;
                     float: right;
                 }
                 
@@ -54,8 +52,7 @@
             width: auto;
     
             .menu-mobile {
-                display: flex;
-                align-items: center;
+                @include flex-al-c;
                 cursor: pointer;
                 gap: .5rem;
                 font: {
