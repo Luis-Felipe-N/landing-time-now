@@ -7,32 +7,31 @@
 }
 
 .card {
-    padding: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     max-width: 300px;
-    border: 1px solid $border-color;
+    border: 1px solid $very-light-black;
     border-radius: .2rem    ;
 
     &-price {
-        &__price {
+        &__price, .simbol-price {
             font: {
                 size: 3rem;
                 weight: 700;
             }
-            // color: $very-dark-text-color;
         }
 
         &__billed {
-            color: $border-color;
+            color: rgba(0, 0, 0, 0.5);
             font-size: 1.2rem;
         }
     }
     
     p {
         color: $dark-text-color;
-        border-bottom: 1px solid $border-color;
+        border-bottom: 1px solid $very-light-black;
         padding-bottom: 1rem
     }
 

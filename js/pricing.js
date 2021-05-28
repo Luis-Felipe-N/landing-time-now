@@ -1,4 +1,23 @@
+const valuePlansPrice = document.querySelectorAll('[data-js="price-plan"]')
+const valuePlansBilled = document.querySelectorAll('[data-js="price-billed"]')
+
 const replacePage = ( ) => window.location.assign( 'pricing.html' )
+
+const isYearly = ( el ) => {
+    el.parentElement.classList.remove('billed-monthly')
+    el.parentElement.classList.add('billed-yearly')
+
+    valuePlansPrice.forEach( planPrice => planPrice.textContent = planPrice.textContent * 12)
+    valuePlansBilled.forEach( planBilled => planBilled.textContent = '/year')
+}
+
+const isMonthly = ( el ) => {
+    el.parentElement.classList.remove('billed-yearly')
+    el.parentElement.classList.add('billed-monthly')
+
+    valuePlansPrice.forEach( planPrice => planPrice.textContent = planPrice.textContent / 12)
+    valuePlansBilled.forEach( planBilled => planBilled.textContent = '/mo')
+}
 
 const changeInput = ( el ) => {
     const spanMonthly = document.querySelector('.span-monthly')
@@ -8,11 +27,9 @@ const changeInput = ( el ) => {
     spanMonthly.classList.toggle('active')
 
     if ( el.checked ) {
-        el.parentElement.classList.remove('billed-monthly')
-        el.parentElement.classList.add('billed-yearly')
+        isYearly( el )
     } else {
-        el.parentElement.classList.remove('billed-yearly')
-        el.parentElement.classList.add('billed-monthly')
+        isMonthly( el )
     }
 
 }

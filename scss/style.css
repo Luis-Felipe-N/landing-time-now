@@ -863,7 +863,7 @@ p {
 }
 
 .card {
-  padding: 1rem;
+  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -873,23 +873,23 @@ p {
           flex-direction: column;
   gap: 1rem;
   max-width: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: .2rem;
 }
 
-.card-price__price {
+.card-price__price, .card-price .simbol-price {
   font-size: 3rem;
   font-weight: 700;
 }
 
 .card-price__billed {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
 }
 
 .card p {
   color: rgba(0, 0, 0, 0.7);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 1rem;
 }
 
