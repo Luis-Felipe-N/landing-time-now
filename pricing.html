@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/scss/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+     <!-- HEADER -->        
+     <header class="header">
+        <div class="header-logo">
+            <img src="/Assets/Logo.svg" alt="Logo">
+        </div>
+        <nav data-js="menu" class="header-menu__container">
+            <button class="menu-mobile"><span class="hamburg"></span></button>
+            <ul class="header-menu">
+                <li class="header-menu__item"><a href="#features">Features</a></li>
+                <li class="header-menu__item"><a href="#pricing">Pricing</a></li>
+                <li class="header-menu__item"><button class="header-btn">Start Scheduling</button></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN -->
+    <main>
+        <section class="pricing-header">
+            <h1>Flexible Plans for Everyone.</h1>
+            <p>Our plans are made for everyone. Whether you're just starting out on social media, or have been on there, we have a plan that's right for you.</p>
+            <div class="billed">
+                <span class="span-monthly active">Billed Monthly</span>
+                <label for="input-billed" class="billed-inputs billed-monthly">
+                    <input type="checkbox" name="input-billed" id="input-billed" data-js="input-billed">
+                </label >
+                <span class="span-yearly">Billed Yearly</span>
+            </div>
+        </section>
+
+    </main>
+    <!-- MAIN END -->
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo"><img src="/Assets/Logo.svg" alt=""></div>
+        <nav>
+            <ul class="footer-menu">
+                <li class="footer-menu__item">
+                    <ul class="footer-menu__item-ul">
+                        <li class="footer-menu__item-ul-tittle">Product</li>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Features</a></li>
+                    </ul>
+                </li>
+                <li class="footer-menu__item">
+                    <ul class="footer-menu__item-ul">
+                        <li class="footer-menu__item-ul-tittle">Company</li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Customers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="footer-menu__item">
+                    <ul class="footer-menu__item-ul">
+                        <li class="footer-menu__item-ul-tittle">Help</li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Send Email</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="footer-input">
+            <h3>Try TweetNow</h3>
+            <div class="footer-input__container">
+                <input type="text" placeholder="Email Address">
+                <button data-js="btn-pricing">Start Scheduling</button>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script src="/js/pricing.js"></script>
+    <script src="/js/menu.js"></script>
+</body>
+</html>
